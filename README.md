@@ -1,103 +1,78 @@
-# UIS Hackathon — Smart Marks Manager
+# UIS Hackathon
 
-An **AI-powered teacher dashboard** built for the **GEMS United Indian School (UIS) Hackathon**. Smart Marks Manager helps teachers record, analyze, and report student marks in one place — replacing scattered spreadsheets with a fast, modern web app.
+A collection of web apps built for the **GEMS United Indian School (UIS) Hackathon** — starting with a modern home page and a fully functional calculator.
 
 **Author:** [Farhan Mohammed R](https://github.com/FARHANMOHAMMED-R)  
-**Repository:** [github.com/FARHANMOHAMMED-R/UIS-Hackathon](https://github.com/FARHANMOHAMMED-R/UIS-Hackathon)
+**Repository:** [github.com/FARHANMOHAMMED-R/UIS-Hackathon](https://github.com/FARHANMOHAMMED-R/UIS-Hackathon)  
+**Live demo:** Open [`index.html`](index.html) in your browser after cloning
 
 ---
 
-## Problem
+## Screenshots
 
-Teachers spend hours juggling Excel sheets, manual grade calculations, and handwritten report cards. Marks get lost, trends are hard to spot, and generating parent-ready reports takes too long.
+### Home Page
+The project hub with links to all hackathon apps.
 
-## Solution
+![Home Page](screenshots/home.png)
 
-Smart Marks Manager gives teachers a single dashboard to:
+### Calculator
+A dark-themed web calculator with keyboard support and basic math operations.
 
-- Manage **students**, **classes**, and **subjects**
-- Enter and update **marks** by exam type (Unit Test, Midterm, Practical, Final Exam)
-- View **analytics** — class averages, pass/fail rates, and performance charts
-- Generate **AI-assisted remarks** and insights for students
-- Export **PDF reports** and **Excel spreadsheets**
-- Work **offline** with built-in demo data, or connect **Firebase** for real-time cloud sync
+![Calculator](screenshots/calculator.png)
+
+---
+
+## Apps
+
+| App | File | Description |
+|-----|------|-------------|
+| **Home** | [`index.html`](index.html) | Welcome page and app launcher |
+| **Calculator** | [`calculator.html`](calculator.html) | Add, subtract, multiply, divide with keyboard support |
 
 ---
 
 ## Features
 
-| Feature | Description |
-|--------|-------------|
-| **Student management** | Add, edit, and search students by class, section, and roll number |
-| **Marks entry** | Bulk entry with validation against max/pass marks per subject |
-| **Dashboard & charts** | Visual overview of class performance using interactive charts |
-| **AI insights** | Smart remark suggestions powered by OpenAI (optional) |
-| **Reports** | Export marksheets to PDF and Excel |
-| **Dark / light theme** | Comfortable UI for long grading sessions |
-| **Offline demo mode** | Pre-loaded seed data — no setup required to explore the app |
-| **Firebase integration** | Optional Auth + Firestore for production use |
+### Home Page
+- Clean, modern dark UI
+- App cards with links to each project
+- Mobile-friendly layout
 
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Frontend | React 18, Vite 6 |
-| Styling | Tailwind CSS, Framer Motion |
-| Routing | React Router v7 |
-| Charts | Recharts |
-| Backend (optional) | Firebase Auth & Firestore |
-| AI (optional) | OpenAI API |
-| Export | jsPDF, xlsx |
-| Notifications | React Hot Toast |
+### Calculator
+- Basic operations: `+`, `−`, `×`, `÷`
+- **AC** (clear), **±** (toggle sign), **%** (percent)
+- Full **keyboard support** (number keys, Enter, Escape, Backspace)
+- Divide-by-zero error handling
+- **← Home** link to return to the main page
 
 ---
 
 ## Getting Started
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) 18 or later
-- npm (comes with Node.js)
-
-### Installation
+No install or build step required — pure HTML, CSS, and JavaScript.
 
 ```bash
-git clone https://github.com/FARHANMOHAMMED-R/UIS-Hackathon.git
+git clone git@github.com:FARHANMOHAMMED-R/UIS-Hackathon.git
 cd UIS-Hackathon
-npm install
+open index.html
 ```
 
-### Run locally
+Or on Windows:
+```bash
+start index.html
+```
+
+### Optional: run with a local server
 
 ```bash
-npm run dev
+# Python
+python3 -m http.server 8000
+
+# Node.js
+npx serve .
 ```
 
-Open the URL shown in the terminal (usually `http://localhost:5173`).
-
-### Environment variables (optional)
-
-Copy `.env.example` to `.env` and fill in your credentials to enable Firebase and AI features:
-
-```bash
-cp .env.example .env
-```
-
-| Variable | Purpose |
-|----------|---------|
-| `VITE_FIREBASE_*` | Firebase web app config for auth and database |
-| `VITE_OPENAI_API_KEY` | Enables real AI remark generation |
-
-Without these keys, the app runs in **demo mode** with local seed data and built-in placeholder AI responses.
-
-### Build for production
-
-```bash
-npm run build
-npm run preview
-```
+Then visit `http://localhost:8000`
 
 ---
 
@@ -105,42 +80,47 @@ npm run preview
 
 ```
 UIS-Hackathon/
-├── src/
-│   ├── components/     # UI components (dashboard, forms, charts)
-│   ├── context/        # React context (auth, theme, data)
-│   ├── firebase/       # Firebase configuration
-│   ├── services/       # Data layer and seed data
-│   └── utils/          # Shared helpers
-├── public/             # Static assets
-├── index.html
-├── package.json
+├── index.html          # Home page
+├── calculator.html     # Calculator app
+├── screenshots/
+│   ├── home.png        # Home page screenshot
+│   └── calculator.png  # Calculator screenshot
 └── README.md
 ```
 
 ---
 
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Markup | HTML5 |
+| Styling | CSS3 (custom properties, Grid, Flexbox) |
+| Logic | Vanilla JavaScript |
+| Fonts | Google Fonts (Inter) |
+
+---
+
 ## Hackathon Context
 
-This project was created for the **UIS Hackathon** — a school innovation challenge focused on building practical tools that improve everyday teaching and learning at GEMS United Indian School.
+This project was created for the **UIS Hackathon** — a school innovation challenge at GEMS United Indian School focused on building practical, useful web tools.
 
-**Target users:** Teachers and school administrators  
-**Goal:** Reduce grading overhead and give educators actionable insights about student performance
+**Goal:** Create simple, polished apps that solve everyday problems — starting with a calculator accessible from a central home page.
 
 ---
 
 ## Roadmap
 
-- [ ] Complete core UI components and routing
-- [ ] Firebase authentication and cloud sync
-- [ ] Parent portal (read-only marks view)
-- [ ] SMS/email notifications for low-performing students
-- [ ] Mobile-responsive layout polish
+- [x] Home page with app links
+- [x] Web calculator with keyboard support
+- [ ] Smart Marks Manager (teacher dashboard)
+- [ ] More hackathon apps linked from the home page
 
 ---
 
 ## License
 
-This project is open source and available for educational and hackathon use.
+Open source — free for educational and hackathon use.
 
 ---
 
