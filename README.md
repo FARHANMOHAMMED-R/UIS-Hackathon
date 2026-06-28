@@ -8,6 +8,20 @@ A collection of web apps built for the **GEMS United Indian School (UIS) Hackath
 
 ---
 
+## Screenshots
+
+### Home Page
+The project hub with links to all hackathon apps.
+
+![Home Page](screenshots/home.png)
+
+### Calculator
+A dark-themed web calculator with keyboard support and basic math operations.
+
+![Calculator](screenshots/calculator.png)
+
+---
+
 ## Apps
 
 | App | File | Description |
@@ -68,6 +82,9 @@ Then visit `http://localhost:8000`
 farhan_new/
 ├── index.html          # Home page
 ├── calculator.html     # Calculator app
+├── screenshots/
+│   ├── home.png        # Home page screenshot
+│   └── calculator.png  # Calculator screenshot
 └── README.md
 ```
 
